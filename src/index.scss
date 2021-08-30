@@ -36,3 +36,11 @@ nav {
 label:not(:last-child) {
   margin-right: 1rem;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  &-content {
+    flex-grow: 1;
+  }
+}
