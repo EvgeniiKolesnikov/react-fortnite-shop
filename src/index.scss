@@ -27,20 +27,26 @@ nav {
   gap: 1rem;
 }
 
-.btn-search {
-  position: absolute;
-  top: 0;
-  right: 0.5rem;
-}
-
-label:not(:last-child) {
-  margin-right: 1rem;
-}
-
 .card {
   display: flex;
   flex-direction: column;
   &-content {
     flex-grow: 1;
+  }
+}
+
+.cart {
+  position: fixed;
+  padding: 1rem;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  @media (min-width: 767px) {
+    top: 5rem;
+    bottom:unset;
+  };
+  &-quantity {
+
   }
 }
