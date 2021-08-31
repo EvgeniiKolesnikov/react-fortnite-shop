@@ -58,8 +58,18 @@ nav {
   background-color: #fff;
   width: 50rem;
   max-width: 95%;
-
   animation: show 500ms ease-in-out;
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
 
 .basket-close {
@@ -87,13 +97,26 @@ nav {
   height: 1.2rem;
 }
 
-@keyframes show {
+.btn-order {
+  cursor: pointer;
+  position: absolute;
+  right: 0.25rem;
+  bottom: 0.25rem;
+}
+
+#toast-container {
+  top: 2rem;
+  animation: fade-in 0.25s ease-in-out;
+}
+
+@keyframes fade-in {
   from {
-    top: 70%;
+    transform: translateY(2rem);
     opacity: 0;
   }
   to {
-    top: 50%;
+    transform: translateY(0rem);
     opacity: 1;
   }
 }
+

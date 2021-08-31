@@ -27,7 +27,9 @@ const BasketList = (props) => {
       ) : (
         <li className='collection-item '>Basket is empty</li>
       )}
-      <li className='collection-item active'>Total price: {totalPrice} ₽</li>
+      <li className='collection-item active'>Total price: {totalPrice} ₽
+        <button className="btn btn-order">Place an order</button>
+      </li> 
       <i
         className='material-icons basket-close'
         onClick={handleBasketShow}
