@@ -77,6 +77,16 @@ nav {
   right: 0.5rem;
 }
 
+.basket-quantity {
+  cursor: pointer;
+  vertical-align: middle;
+  border: 1px solid #26a69a;
+  border-radius:3px;
+  color: #26a69a;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 @keyframes show {
   from {
     top: 70%;
