@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { API_KEY, API_URL } from '../config';
+import BasketList from './BasketList';
 import Cart from './Cart';
 import GoodsList from './GoodsList';
 import Preloader from './Preloader';
@@ -8,6 +9,7 @@ const Shop = () => {
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
+  const [isBasketShow, setIsBasketShow] = useState(false);
 
   const addToBasket = (item) => {
     const itemIndex = order.findIndex(orderItem => orderItem.id === item.id);
@@ -32,6 +34,16 @@ const Shop = () => {
     }
 
   }
+
+  const removeFromBasket = (itemId) => {
+    const newOrder = order.filter(el => el.id !== itemId);
+    setOrder(newOrder);
+  }
+
+  const handleBasketShow = () => {
+    setIsBasketShow(!isBasketShow);
+  }
+
   useEffect(function getGoods() {
     fetch(API_URL, { headers: { Authorization: API_KEY } })
     .then(response => response.json())
@@ -46,8 +58,9 @@ const Shop = () => {
 
   return (
     <main className='container content'>
-      <Cart quantity={order.length} />
+      <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
       {loading ? (<Preloader />) : <GoodsList goods={goods} addToBasket={addToBasket} /> }
+      {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} removeFromBasket={removeFromBasket} />}
     </main>
   )
 };
