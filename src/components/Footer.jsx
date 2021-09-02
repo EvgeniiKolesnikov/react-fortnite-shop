@@ -10,7 +10,7 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            More Links
+            Repo
           </a>
         </div>
       </div>
