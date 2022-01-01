@@ -1,4 +1,5 @@
-# react-fortnite-shop
-Open https://evgeniikolesnikov.github.io/react-fortnite-shop/ to view it.
+## react-fortnite-shop
 
-This project is based on the course of Непомнящих
+Open [evgeniikolesnikov.github.io/react-fortnite-shop](https://evgeniikolesnikov.github.io/react-fortnite-shop) to view deployment.
+
+This project is based on the course of Михаил Непомнящих.
